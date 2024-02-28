@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <main>
+    <h1>Reserva de habitación en hotel</h1>
+    <section>
+      <form action="#">
+
+
+        <fieldset class="personales">
+          <legend>Datos personales</legend>
+          <div>
+            <label for="nombre">Nombre:</label>
+            <input type="text" name="nombre" id="nombre" required>
+          </div>
+          <div>
+            <label for="apellido">Apellido(s):</label>
+            <input type="text" name="apellido" id="apellido" required>
+          </div>
+        </fieldset>
+
+
+        <fieldset class="reserva">
+          <legend>Datos de la reserva</legend>
+          <div>
+            <label for="adultos">Adultos:</label>
+            <input type="number" name="adultos" id="adultos" min="0" value="2">
+          </div>
+          <div>
+            <label for="niños">Niños:</label>
+            <input type="number" name="niños" id="niños" min="0" value="0">
+          </div>
+        </fieldset>
+
+
+        <fieldset class="comida">
+          <legend>Régimen de comidas:</legend>
+          <div>
+            <div>
+              <input type="radio" name="comida" id="desayuno" checked>
+              <label for="desayuno">Solo desayuno</label>
+            </div>
+
+            <div>
+              <input type="radio" name="comida" id="media">
+              <label for="media">Media pensión</label>
+            </div>
+            <div>
+              <input type="radio" name="comida" id="completa">
+              <label for="completa">Pensión completa</label>
+            </div>
+          </div>
+
+        </fieldset>
+
+        <div class="botones">
+          <button type="button" onclick="reservar()">Reservar</button>
+          <button type="reset" onclick="borrar()">Borrar campos</button>
+        </div>
+
+      </form>
+    </section>
+  </main>
+
+
+
+
+  <script src="js/script.js"></script>
+</body>
+
+</html>
