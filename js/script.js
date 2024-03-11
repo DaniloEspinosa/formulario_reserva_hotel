@@ -8,6 +8,16 @@ function reservar() {
     let niños = document.getElementById("niños")
     let comida = document.getElementsByName("comida")
 
+    if (nombre.value == "" || apellido.value == "") {
+        if (nombre.value == "" && apellido.value == "") {
+            alert("Falta el nombre y el apellido")
+        } else if (nombre.value == "") {
+            alert("Falta el nombre")
+        } else {
+            alert("Falta el apellido")
+        }
+    }
+
     // Bucle for que servira para recorrer la seleccion de los radio button
     // y devolvera el que esta seleccionado (.checked)
     for (let i = 0; i < comida.length; i++) {

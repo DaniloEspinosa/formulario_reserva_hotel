@@ -62,7 +62,15 @@ fieldset {
 .botones button:first-child {
     background-color: rgb(0 255 0 / 0.5);
 }
+.botones button:first-child:hover {
+    background-color: rgb(6, 117, 6);
+    color: white;
+}
 
 .botones button:last-child {
     background-color: rgb(255 0 0 / 0.5);
+}
+.botones button:last-child:hover {
+    background-color: rgb(255 0 0);
+    color: white;
 }
