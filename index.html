@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Reserva hotel</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -23,7 +23,7 @@
           </div>
           <div>
             <label for="apellido">Apellido(s):</label>
-            <input type="text" name="apellido" id="apellido" required>
+            <input type="text" name="apellido" id="apellido" min="2" required>
           </div>
         </fieldset>
 
@@ -32,11 +32,11 @@
           <legend>Datos de la reserva</legend>
           <div>
             <label for="adultos">Adultos:</label>
-            <input type="number" name="adultos" id="adultos" min="0" value="2">
+            <input type="number" name="adultos" id="adultos" min="0" max="4" value="2">
           </div>
           <div>
             <label for="niños">Niños:</label>
-            <input type="number" name="niños" id="niños" min="0" value="0">
+            <input type="number" name="niños" id="niños" min="0" max="6" value="0">
           </div>
         </fieldset>
 
@@ -45,16 +45,17 @@
           <legend>Régimen de comidas:</legend>
           <div>
             <div>
-              <input type="radio" name="comida" id="desayuno" checked>
+              <input type="radio" name="comida" id="desayuno" value="Solo desayuno" checked>
               <label for="desayuno">Solo desayuno</label>
             </div>
 
             <div>
-              <input type="radio" name="comida" id="media">
+              <input type="radio" name="comida" id="media" value="Media pensión">
               <label for="media">Media pensión</label>
             </div>
+
             <div>
-              <input type="radio" name="comida" id="completa">
+              <input type="radio" name="comida" id="completa" value="Pensión completa">
               <label for="completa">Pensión completa</label>
             </div>
           </div>
@@ -63,7 +64,7 @@
 
         <div class="botones">
           <button type="button" onclick="reservar()">Reservar</button>
-          <button type="reset" onclick="borrar()">Borrar campos</button>
+          <button type="reset">Borrar campos</button>
         </div>
 
       </form>
