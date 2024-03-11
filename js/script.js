@@ -11,10 +11,13 @@ function reservar() {
     if (nombre.value == "" || apellido.value == "") {
         if (nombre.value == "" && apellido.value == "") {
             alert("Falta el nombre y el apellido")
+            return
         } else if (nombre.value == "") {
             alert("Falta el nombre")
+            return
         } else {
             alert("Falta el apellido")
+            return
         }
     }
 
